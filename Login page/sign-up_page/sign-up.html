@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="sign-up.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Page</title>
+    <script>
+        function validate() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation
+            if (username === 'Ganesh' && password === 'G@18') {
+                // Redirect to another page (sub.html in this case)
+                window.location.href = "http://127.0.0.1:5500/loginpage/loginpage.html"; 
+            } else {
+                alert("Wrong Entry");
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url(sign-up_bg.jpg);">
+  <div class="Sign-up">
+    <form onsubmit="event.preventDefault(); validate();">
+      <h1>Create A New Account</h1>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="password" id="password" name="password"><br><br>
+        <input type="submit" value="Sign-up">
+    </form>
+  </div>
+</body>
+</html>

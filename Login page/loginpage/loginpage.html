@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="loginpage.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+    <script>
+        function validate() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation
+            if (username === 'Ganesh' && password === 'G@18') {
+                // Redirect to another page (sub.html in this case)
+                window.location.href = "http://127.0.0.1:5500/Homepage/home.html"; 
+            } else {
+                alert("Username or Password is Incorrect");
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url(login_bg.jpg);">
+  <div class="login">
+    <form onsubmit="event.preventDefault(); validate();">
+      <h1>Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+        <a href="http://127.0.0.1:5500/sign-up_page/sign-up.html">
+          <h6><u>Create New Account?</u></h6>
+        </a>
+    </form>
+  </div>
+  <p></p>Username : Ganesh</p>
+    <p>       Password : G@18</p>
+</body>
+</html>
